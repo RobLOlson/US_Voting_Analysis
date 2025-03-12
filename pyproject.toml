@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "us-voting-analysis"
+version = "0.1.0"
+description = "Analysis of US precinct-level voting patterns"
+authors = ["Rob Olson"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"  # Match system Python version
+pandas = "^2.0.0"
+numpy = "^1.26.0"  # Updated for Python 3.12 compatibility
+matplotlib = "^3.8.0"  # Updated for newer dependencies
+seaborn = "^0.13.0"  # Updated for newer dependencies
+jupyter = "^1.0.0"
+pyarrow = "^15.0.0"  # Added for parquet support
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^24.2.0"
+flake8 = "^7.0.0"
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
